@@ -17,7 +17,9 @@ const ResultsContainer = styled.div`
 
 const Results = ({ items, onItemSelected, query, onResultsCalculated }) => {
     const [results, setResults] = useState([]);
-    const filteredItems = useMemo(() => findMatch(items, query), [items, query]);
+    const filteredItems = useMemo(function () {
+        return findMatch(items, query);
+    }, [items, query]);
 
      useEffect(() => {
         onResultsCalculated(results);
