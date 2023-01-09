@@ -23,37 +23,37 @@ const StyledItem = styled.a`
   }
 `;
  
-const MarkedItem = ({ item, onClick, query }) => {
+function MarkedItem({ item, onClick, query }) {
 
-    const { left, center, right } = useMemo(
-        () => getPositions(item, query),
-        [item, query]
-    );
+  const { left, center, right } = useMemo(
+    () => getPositions(item, query),
+    [item, query]
+  );
 
-    function getPositions(item, query) {
-        const index = item.title.toLowerCase().indexOf(query);
-        const left = item.title.slice(0, index);
-        const center = item.title.slice(index, index + query.length);
-        const right = item.title.slice(index + query.length);
+  function getPositions(item, query) {
+    const index = item.title.toLowerCase().indexOf(query);
+    const left = item.title.slice(0, index);
+    const center = item.title.slice(index, index + query.length);
+    const right = item.title.slice(index + query.length);
 
-        return {
-            left,
-            center,
-            right,
-        };
-    }
+    return {
+      left,
+      center,
+      right,
+    };
+  }
 
-    function handleClick(e) {
-        onClick(item);
-    }
+  function handleClick(e) {
+    onClick(item);
+  }
 
-    return (
-        <StyledItem href="#" onClick={handleClick}>
-            {left}
-            <StyledMarker>{center}</StyledMarker>
-            {right}
-        </StyledItem>
-    );
+  return (
+    <StyledItem href="#" onClick={handleClick}>
+      {left}
+      <StyledMarker>{center}</StyledMarker>
+      {right}
+    </StyledItem>
+  );
 }
 
 export default MarkedItem

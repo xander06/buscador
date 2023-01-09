@@ -78,7 +78,7 @@ function App() {
 
   const [data, setData] = useState([ ...people, ...emails, ...calendar]);
   const [selection, setSelection] = useState(null);
-  const [currentOption, setCurrentOption] = useState("all");
+  const [ setCurrentOption] = useState("all");
 
   function handleClick(e) {
     const location = e.target.name;
@@ -103,6 +103,8 @@ function App() {
         setData([...calendar]);
         setCurrentOption("calendar");
         break;
+      default:
+          // do nothing
     }
   }
 
@@ -110,7 +112,7 @@ function App() {
     setSelection(item);
   }
 
-  return (
+   return (
     <div>
       <div>
         <Titulo />
