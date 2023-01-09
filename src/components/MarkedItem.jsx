@@ -1,11 +1,12 @@
 import React from 'react'
 import { useMemo } from "react";
-/* import styled from "styled-components";
+import styled from "styled-components";
 
 const StyledMarker = styled.span`
-  background-color: yellow;
+  background-color: #ffb693;;
   font-weight: bolder;
   border-radius: 2px;
+  cursor : pointer;
 `;
 
 const StyledItem = styled.a`
@@ -21,7 +22,7 @@ const StyledItem = styled.a`
     color: black;
   }
 `;
- */
+ 
 const MarkedItem = ({ item, onClick, query }) => {
 
     const { left, center, right } = useMemo(
@@ -45,12 +46,13 @@ const MarkedItem = ({ item, onClick, query }) => {
     function handleClick(e) {
         onClick(item);
     }
+
     return (
-        <div href="#" onClick={handleClick}>
+        <StyledItem href="#" onClick={handleClick}>
             {left}
-            <div>{center}</div>
+            <StyledMarker>{center}</StyledMarker>
             {right}
-        </div>
+        </StyledItem>
     );
 }
 

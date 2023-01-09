@@ -1,9 +1,9 @@
 import React from 'react'
 import { useEffect, useMemo, useState } from "react";
 import MarkedItem from "./MarkedItem";
+import styled from 'styled-components';
 
 
-/* 
 const ResultsContainer = styled.div`
   position: absolute;
   width: 400px;
@@ -13,16 +13,16 @@ const ResultsContainer = styled.div`
   margin-top: -3px;
   box-sizing: border-box;
   border-radius: 0 0 5px 5px;
-`; */
+`; 
 
 const Results = ({ items, onItemSelected, query, onResultsCalculated }) => {
     const [results, setResults] = useState([]);
     const filteredItems = useMemo(() => findMatch(items, query), [items, query]);
 
-    useEffect(() => {
+     useEffect(() => {
         onResultsCalculated(results);
     }, [results]);
-
+ 
     function findMatch(items, query) {
         const res = items.filter((q) => {
             return (
@@ -34,19 +34,17 @@ const Results = ({ items, onItemSelected, query, onResultsCalculated }) => {
         setResults(res);
         return res;
     }
+
+   
     return (
-        <div>
-            {query !== ""
-                ? filteredItems.map((item) => (
-                    <div
-                        key={item.id}
+        <ResultsContainer>
+            {query !== "" ? filteredItems.map((item) => 
+                    <MarkedItem key={item.id}
                         item={item}
                         query={query}
-                        onClick={onItemSelected}
-                    />
-                ))
-                : ""}
-        </div>
+                        onClick={onItemSelected}/>
+                    ) : ""}
+        </ResultsContainer>
     );
 }
 

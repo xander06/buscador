@@ -1,0 +1,90 @@
+
+
+body {
+    color: black;
+    background-image: url('../public/img/fondo.png');
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.titulo {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    color: #ff9016;
+    margin-bottom: 2%;
+}
+.containerbotones {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.app {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.result {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 2em;
+    border-color: blue;
+    border-width: 1em;
+    background-color: rgb(7, 7, 74);
+    color: rgb(255, 255, 255);
+    margin: 2%;
+    width: 40%;
+    padding: 1em;
+    box-shadow: 1em 1em 2em rgb(18, 33, 232);
+    min-width: 400px;
+}
+
+.input-icon {
+    color: #0b077b;
+    width: 20px;
+    top: 50%;
+    margin-left: -29px;
+  }
+
+.cantidadRes {
+    color: rgb(45, 250, 250);
+    background-color: #0b077b;
+    align-content: center;
+    border-radius: 1em;
+    margin:1%;
+}
+
+button {
+    text-decoration: none;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    background: rgb(57, 96, 147);
+    transition: all 0.5s ease;
+    font-size: 14px;
+    box-shadow: #ccc;
+    box-shadow: 0px 2px 2px 2px rgba(0, 0, 0, 0.8);
+}
+
+button:hover {
+    color: rgb(26, 26, 26);
+    background: white;
+    border: 3px solid rgb(12, 75, 158);;
+    box-shadow: NONE;
+}

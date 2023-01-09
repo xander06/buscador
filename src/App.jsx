@@ -1,23 +1,9 @@
 import { useState } from "react";
 import SearchBar from "./components/SearchBar";
 import Titulo from "./components/Titulo";
-/* 
-const StyledButton = styled.button`
-  padding: 10px;
-  border-radius: 5px;
-  border: none;
-  background-color: white;
-  border: solid 2px #ccc;
-  cursor: pointer;
-  &:hover {
-    background-color: #efefef;
-  }
-  .activated{
-    background-color: #00366
-    color: white;
-    border: solid 2px #26aeff;
-  }
-`; */
+import "./App.css";
+
+
 
 const emails = [
   {
@@ -125,29 +111,30 @@ function App() {
   }
 
   return (
-    <div className="App">
-      <div >
-      <Titulo />
-      </div>
-      <button name="all" onClick={handleClick}>
-        Search in All
-      </button>
-      <button name="people" onClick={handleClick}>
-        Search in People
-      </button >
-      <button name="emails" onClick={handleClick}>
-        Search in Emails
-      </button>
-      <button name="calendar" onClick={handleClick}>
-        Search in Calendar
-      </button>
+    <div>
       <div>
-        {data.map(item => <div>{item.title}</div> )}
+        <Titulo />
       </div>
-     {/*  {selection ? <div>You selected: {selection.title}</div> : ""}
-      <br />*/}
-      <SearchBar items={data} onItemSelected={handleOnItemSelected} />
-    </div> 
+      <div className="container">
+        <div className="app">
+        <button  name="all" onClick={handleClick}>
+          Search in All
+        </button>
+        <button  name="people" onClick={handleClick}>
+          Search in People
+        </button>
+        <button  name="emails" onClick={handleClick}>
+          Search in Emails
+        </button>
+        <button  name="calendar" onClick={handleClick}>
+          Search in Calendar
+        </button>
+        </div>
+        {selection ? <div className="result">You selected: {selection.title}</div> : ""}
+        <SearchBar items={data} onItemSelected={handleOnItemSelected} />
+        
+      </div>
+    </div>
   );
 }
 
