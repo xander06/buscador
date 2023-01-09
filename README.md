@@ -1,4 +1,4 @@
-# Wheather App 5 app of  5 with React
+# Buscador App 5 app of  5 with React
 ## App5 Buscador <img src='./public/img/logo.png'>  
 
 - In this repository you can  see 5  app  with  react Hooks  and  use States, developer with con React, in the "[Kruger Start](https://www.youtube.com/@KrugerCorp)   "
