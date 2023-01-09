@@ -24,7 +24,7 @@ Use the following steps to run this Portfolio locally:
 
 - get in the directory you want this folder to appear
 
-- put: git clone [https://github.com/xander06/Buscador] (https://github.com/xander06/buscador)
+- put: git clone [Git Hub Buscador](https://github.com/xander06/buscador)
 
 - open the folder with a code editor (VS Code preferred)
 
@@ -34,7 +34,7 @@ Use the following steps to run this Portfolio locally:
 ### Deployment 🫣😊👌😁
 
 For a live demo please click on the following link ⏭️⏭️:
-[5Proyectos 5 Buscador](https://weatherapp2xacr.netlify.app)
+- [5 Proyectos 5 Buscador](https://buscardorxcr.netlify.app)
 
 
 ## Authors
@@ -47,10 +47,6 @@ For a live demo please click on the following link ⏭️⏭️:
 👤 **Vida MRR - Programacion web**
 
 - [Youtube Vida MRR - Programacion web](https://www.youtube.com/@vidamrr)
-
-👤 **Wheater Api**
-
-- [Wheather Api](https://www.weatherapi.com/api.aspx)
 
 ## 🤝 Contributing
 
