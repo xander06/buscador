@@ -104,7 +104,7 @@ function App() {
         setCurrentOption("calendar");
         break;
       default:
-          // do nothing
+        // do nothing
     }
   }
 
